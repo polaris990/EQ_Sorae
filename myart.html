@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Step into the world of SORAE. Explore our exclusive collection of original manga and comics, and discover the fascinating inspirations behind how each story was born.">
+
+  <meta name="keywords"
+    content="SORAE, SORAE Manga, Read Original Manga, Webcomics, Manga Art, Manga Inspiration, Comic Creator">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SORAE</title>
+  <link rel="icon" href="LOGO0.png">
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: rgb(255, 255, 255);
+      color: rgb(66, 66, 66);
+    }
+
+    /* //////////////////////////////header///////////////////////// */
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #636363;
+    }
+
+    /* LOGO */
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #111;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #868686;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00a2ff;
+    }
+
+
+
+    /* //////////////////////////////HERO//////////////////////////////////// */
+
+    .hero {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      padding: 100 60px;
+      background-repeat: no-repeat;
+      background-size: 1500px;
+      background-position: right;
+      background-image: linear-gradient(to right,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)),
+        url(b12.png);
+
+      background-size: cover;
+      background-position: right;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #ddd;
+      font-size: 18px;
+    }
+
+
+
+    /* //////////////Sections ///////////////// */
+
+    section {
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+
+    /* ///////////////////////////////Latest Updates//////////////////////// */
+    /* ART SECTION */
+
+    .art-section {
+      padding: 40px;
+      background: #fafafa;
+    }
+
+    /* GRID (only one system) */
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    /* CARD */
+    .art-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    /* IMAGE (ONLY ONE RULE) */
+    .art-card img {
+      width: 100%;
+      aspect-ratio: 2.5/4;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    /* TEXT */
+    .art-card h3 {
+      margin: 15px;
+      text-align: center;
+    }
+
+    .art-card p {
+      margin: 0 15px 15px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* HOVER */
+    .art-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .art-card:hover img {
+      transform: scale(1.05);
+    }
+
+
+    /* ///////////////////////////FOOTER/////////////////////////////////// */
+
+
+
+    /* FOOTER */
+    footer {
+      background: #ffffff;
+      padding: 30px 10px;
+      margin-top: 10px;
+      border-top: 1px solid #f0f0f0;
+      text-align: center;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .footer-section h3 {
+      color: #5a5858;
+      font-size: 40px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-section p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .link-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      /* Puts links side-by-side but centered */
+      flex-wrap: wrap;
+    }
+
+    .footer-section a {
+      color: #4b4b4b;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #ff4757;
+      /* A little pop of color for the hover */
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #f9f9f9;
+      width: 100%;
+    }
+
+    .footer-bottom p {
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    /* ////////////////// NEW STYLES (Added without changing original code) ////////////////// */
+    .art-details {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .art-name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .art-price {
+      font-size: 15px;
+      color: #00a2ff;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background-color: #00a2ff;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-top: 5px;
+    }
+
+    .buy-btn:hover {
+      background-color: #0081cc;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <a href="index.html" class="logo-box">
+      <img src="LOGO0.png" class="logo-img">
+      <span class="logo-text">SORAE</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Commissions.html">Art Commissions</a>
+      <a href="Speedpaint.html">Speed paint video</a>
+      <a href="myart.html">My art</a>
+      <a href="about.html">About</a>
+    </nav>
+
+  </header>
+
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>My Art Work</h1>
+      <p>This page will show the day that I created those works of art.</p>
+    </div>
+
+  </section>
+
+
+  <section class="art-section">
+
+    <h1>My Art Work</h1>
+
+    <div class="art-grid">
+
+      <div class="art-card">
+        <img src="b30.png">
+        <h3>2021</h3>
+        <p>
+        <div class="art-details">
+          <span class="art-name">Artwork Title One</span>
+          <span class="art-price">$45.00</span>
+          <a href="order.html" class="buy-btn">Buy Now</a>
+        </div>
+        </p>
+      </div>
+
+      <div class="art-card">
+        <img src="b28.png">
+        <h3>2022</h3>
+        <p>
+        <div class="art-details">
+          <span class="art-name">Artwork Title Two</span>
+          <span class="art-price">$50.00</span>
+          <a href="order.html" class="buy-btn">Buy Now</a>
+        </div>
+        </p>
+      </div>
+
+      <div class="art-card">
+        <img src="b31.png">
+        <h3>2021</h3>
+        <p>
+        <div class="art-details">
+          <span class="art-name">Artwork Title Three</span>
+          <span class="art-price">$40.00</span>
+          <a href="order.html" class="buy-btn">Buy Now</a>
+        </div>
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="art-section">
+
+    <h2></h2>
+
+    <div class="art-grid">
+
+      <div class="art-card">
+        <img src="b27.png">
+        <h3>2022</h3>
+        <p>
+        <div class="art-details">
+          <span class="art-name">Artwork Title Four</span>
+          <span class="art-price">$55.00</span>
+          <a href="order.html" class="buy-btn">Buy Now</a>
+        </div>
+        </p>
+      </div>
+
+      <div class="art-card">
+        <img src="b14.png">
+        <h3>2026</h3>
+        <p>
+        <div class="art-details">
+          <span class="art-name">Artwork Title Five</span>
+          <span class="art-price">$65.00</span>
+          <a href="order.html" class="buy-btn">Buy Now</a>
+        </div>
+        </p>
+      </div>
+
+      <div class="art-card">
+        <img src="b26.png">
+        <h3>2023</h3>
+        <p>
+        <div class="art-details">
+          <span class="art-name">Artwork Title Six</span>
+          <span class="art-price">$60.00</span>
+          <a href="order.html" class="buy-btn">Buy Now</a>
+        </div>
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <footer>
+    <div class="footer-content">
+
+      <div class="footer-section">
+        <h3>SORAE</h3>
+        <p>
+          SORAE is a modern manga platform where <br>
+          I share my creations, comics, art, and more.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="link-group">
+          <a href="index.html">Home</a>
+          <a href="Commissions.html">Art Commissions</a>
+          <a href="Speedpaint.html">Speed paint video</a>
+          <a href="myart.html">My art</a>
+          <a href="about.html">About</a>
+
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Support Artists</h3>
+        <div class="link-group">
+          <a href="https://www.instagram.com/">Donate</a>
+            <a href="https://x.com/">Ask about Commissions</a>
+            <a href="https://www.google.com/">Ideas</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>09-448834175</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SORAE. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>
